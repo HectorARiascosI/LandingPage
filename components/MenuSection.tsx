@@ -31,7 +31,7 @@ export default function MenuSection() {
         {menuItems.map((item) => (
           <div key={item.name} className="group cursor-pointer">
             {/* Rectangular image - 4:3 ratio */}
-            <div className="rounded-xl overflow-hidden w-full" style={{ aspectRatio: "4/3" }}>
+            <div className="rounded-3xl overflow-hidden w-full" style={{ aspectRatio: "4/3" }}>
               <img
                 src={item.image}
                 alt={item.name}
