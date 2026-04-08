@@ -1,29 +1,4 @@
+// Community content is now embedded inside WaysToEnjoy section
 export default function Community() {
-  return (
-    <section className="max-w-6xl mx-auto px-4 py-10">
-      {/* Two columns: community left | franchise right */}
-      <div className="flex flex-col md:flex-row gap-6 items-start">
-
-        {/* LEFT: community */}
-        <div className="flex-1 flex flex-col md:flex-row items-center gap-6">
-          <div className="flex-1">
-            <p className="text-[#F47B20] text-sm font-semibold font-sans mb-1">@yourbrandhandle</p>
-            <h2 className="text-2xl md:text-3xl font-bold uppercase text-[#1a1a1a] leading-tight mb-3">
-              Let&apos;s Work Together<br />For Our Community
-            </h2>
-            <p className="text-gray-500 text-sm font-sans leading-relaxed max-w-xs">
-              We believe in giving back. Join us in supporting local initiatives, events, and partnerships that make our neighborhoods stronger.
-            </p>
-          </div>
-          {/* Illustrated characters */}
-          <div className="flex-shrink-0 w-32 h-32 bg-[#F47B20]/10 rounded-2xl flex items-center justify-center">
-            <svg xmlns="http://www.w3.org/2000/svg" className="w-16 h-16 text-[#F47B20]" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1}>
-              <path strokeLinecap="round" strokeLinejoin="round" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0z" />
-            </svg>
-          </div>
-        </div>
-
-      </div>
-    </section>
-  );
+  return null;
 }

@@ -1,8 +1,10 @@
 const whyChooseImages = [
-  "https://images.unsplash.com/photo-1571407970349-bc81e7e96d47?w=300&q=80",
-  "https://images.unsplash.com/photo-1565299585323-38d6b0865b47?w=300&q=80",
-  "https://images.unsplash.com/photo-1593560708920-61dd98c46a4e?w=300&q=80",
-  "https://images.unsplash.com/photo-1548369937-47519962c11a?w=300&q=80",
+  "https://images.unsplash.com/photo-1571407970349-bc81e7e96d47?w=400&q=80",
+  "https://images.unsplash.com/photo-1565299585323-38d6b0865b47?w=400&q=80",
+  "https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=400&q=80",
+  "https://images.unsplash.com/photo-1593560708920-61dd98c46a4e?w=400&q=80",
+  "https://images.unsplash.com/photo-1548369937-47519962c11a?w=400&q=80",
+  "https://images.unsplash.com/photo-1513104890138-7c749659a591?w=400&q=80",
 ];
 
 export default function WaysToEnjoy() {
@@ -10,71 +12,88 @@ export default function WaysToEnjoy() {
     <section className="max-w-6xl mx-auto px-4 py-10">
       <h2 className="text-2xl font-bold uppercase text-[#1a1a1a] mb-5 tracking-wide">Ways to Enjoy</h2>
 
-      {/* Main layout: pizza left | right column */}
-      <div className="flex flex-col md:flex-row gap-4 items-start">
+      {/* Grid: left col (pizza + community text) | right col (cards + why choose us) */}
+      <div className="grid grid-cols-1 md:grid-cols-[1fr_1.4fr] gap-4 items-start">
 
-        {/* LEFT: large pizza image with logo overlay */}
-        <div className="relative rounded-2xl overflow-hidden flex-shrink-0 w-full md:w-[280px] h-[280px]">
-          <img
-            src="https://images.unsplash.com/photo-1628840042765-356cda07504e?w=600&q=80"
-            alt="Crust Pizza"
-            className="w-full h-full object-cover"
-          />
-          {/* Circular logo stamp */}
-          <div className="absolute inset-0 flex items-center justify-center">
-            <div className="w-24 h-24 rounded-full bg-[#1a1a1a]/85 flex flex-col items-center justify-center border-2 border-[#F47B20]">
-              <span className="text-white text-[7px] tracking-widest font-sans uppercase">Crust</span>
-              <span className="text-[#F47B20] text-sm font-bold font-sans uppercase leading-none">PIZZA</span>
-              <span className="text-white text-[7px] tracking-widest font-sans uppercase">CO.</span>
+        {/* LEFT COLUMN */}
+        <div className="flex flex-col gap-4">
+          {/* Large pizza image with Crust logo stamp */}
+          <div className="relative rounded-2xl overflow-hidden w-full aspect-square">
+            <img
+              src="https://images.unsplash.com/photo-1628840042765-356cda07504e?w=700&q=80"
+              alt="Crust Pizza"
+              className="w-full h-full object-cover"
+            />
+            {/* Circular logo stamp centered */}
+            <div className="absolute inset-0 flex items-center justify-center">
+              <div className="w-28 h-28 rounded-full bg-[#1a1a1a]/85 flex flex-col items-center justify-center border-2 border-[#c8a96e]">
+                <span className="text-[#c8a96e] text-[8px] tracking-[3px] font-sans uppercase">✦ CRUST ✦</span>
+                <span className="text-white text-xl font-bold font-sans uppercase leading-none mt-0.5">PIZZA</span>
+                <span className="text-white text-sm font-bold font-sans uppercase leading-none">CO.</span>
+                <span className="text-[#c8a96e] text-[7px] tracking-[2px] font-sans uppercase mt-0.5">✦ ✦ ✦</span>
+              </div>
             </div>
+          </div>
+
+          {/* Community text below pizza */}
+          <div>
+            <p className="text-[#F47B20] text-sm font-semibold font-sans mb-1">@yourbrandhandle</p>
+            <h3 className="text-2xl font-bold uppercase text-[#1a1a1a] leading-tight mb-2">
+              Let&apos;s Work Together<br />For Our Community
+            </h3>
+            <p className="text-gray-500 text-sm font-sans leading-relaxed max-w-xs">
+              We believe in giving back. Join us in supporting local initiatives, events, and partnerships that make our neighborhoods stronger.
+            </p>
           </div>
         </div>
 
-        {/* RIGHT column */}
-        <div className="flex-1 flex flex-col gap-4">
+        {/* RIGHT COLUMN */}
+        <div className="flex flex-col gap-4">
 
-          {/* Top: 2 dark cards side by side */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-
-            {/* Award-winning */}
-            <div className="bg-[#1a1a1a] rounded-2xl p-5 flex flex-col gap-3">
-              <div className="w-11 h-11 rounded-full bg-[#F47B20] flex items-center justify-center flex-shrink-0">
-                <svg xmlns="http://www.w3.org/2000/svg" className="w-5 h-5 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
-                  <path strokeLinecap="round" strokeLinejoin="round" d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z" />
-                </svg>
+          {/* Top row: community icon top-right + 2 dark cards */}
+          <div className="flex gap-4 items-start">
+            {/* 2 dark cards */}
+            <div className="grid grid-cols-2 gap-4 flex-1">
+              {/* Award-winning */}
+              <div className="bg-[#1a1a1a] rounded-2xl p-5 flex flex-col gap-3">
+                <div className="w-11 h-11 rounded-full bg-[#F47B20] flex items-center justify-center flex-shrink-0">
+                  <svg xmlns="http://www.w3.org/2000/svg" className="w-5 h-5 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z" />
+                  </svg>
+                </div>
+                <h3 className="text-white text-sm font-bold uppercase leading-tight">Award-Winning Pizza & Service</h3>
+                <p className="text-gray-400 text-xs font-sans leading-relaxed">
+                  Recognized for outstanding quality, taste, and customer experience across all our locations.
+                </p>
+                <a href="#" className="inline-block bg-[#F47B20] text-white text-[10px] font-bold tracking-widest px-4 py-2 rounded-full hover:bg-orange-600 transition-colors w-fit font-sans">
+                  LEARN MORE
+                </a>
               </div>
-              <h3 className="text-white text-base font-bold uppercase leading-tight">Award-Winning Pizza & Service</h3>
-              <p className="text-gray-400 text-xs font-sans leading-relaxed">
-                Recognized for outstanding quality, taste, and customer experience across all our locations.
-              </p>
-              <a href="#" className="inline-block bg-[#F47B20] text-white text-[10px] font-bold tracking-widest px-4 py-2 rounded-full hover:bg-orange-600 transition-colors w-fit font-sans">
-                LEARN MORE
-              </a>
-            </div>
 
-            {/* Kids eat free */}
-            <div className="bg-[#1a1a1a] rounded-2xl p-5 flex flex-col gap-3">
-              <div className="w-11 h-11 rounded-full bg-[#F47B20] flex items-center justify-center flex-shrink-0">
-                <svg xmlns="http://www.w3.org/2000/svg" className="w-5 h-5 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
-                  <path strokeLinecap="round" strokeLinejoin="round" d="M14.828 14.828a4 4 0 01-5.656 0M9 10h.01M15 10h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
-                </svg>
+              {/* Kids eat free */}
+              <div className="bg-[#1a1a1a] rounded-2xl p-5 flex flex-col gap-3">
+                <div className="w-11 h-11 rounded-full bg-[#F47B20] flex items-center justify-center flex-shrink-0">
+                  <svg xmlns="http://www.w3.org/2000/svg" className="w-5 h-5 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M14.828 14.828a4 4 0 01-5.656 0M9 10h.01M15 10h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                  </svg>
+                </div>
+                <h3 className="text-white text-sm font-bold uppercase leading-tight">Kids Eat Free Tuesdays!</h3>
+                <p className="text-gray-400 text-xs font-sans leading-relaxed">
+                  Every Tuesday, kids eat free with the purchase of an adult entrée. Family fun every week.
+                </p>
+                <a href="#" className="inline-block border border-[#F47B20] text-[#F47B20] text-[10px] font-bold tracking-widest px-4 py-2 rounded-full hover:bg-[#F47B20] hover:text-white transition-colors w-fit font-sans">
+                  VIEW OUR COMPLETE MENU
+                </a>
               </div>
-              <h3 className="text-white text-base font-bold uppercase leading-tight">Kids Eat Free Tuesdays!</h3>
-              <p className="text-gray-400 text-xs font-sans leading-relaxed">
-                Every Tuesday, kids eat free with the purchase of an adult entrée. Family fun every week.
-              </p>
-              <a href="#" className="inline-block border border-[#F47B20] text-[#F47B20] text-[10px] font-bold tracking-widest px-4 py-2 rounded-full hover:bg-[#F47B20] hover:text-white transition-colors w-fit font-sans">
-                VIEW OUR COMPLETE MENU
-              </a>
             </div>
           </div>
 
-          {/* Bottom: Why Choose Us white card with 2x2 photo grid */}
+          {/* Why Choose Us — white card with 3x2 photo grid */}
           <div className="bg-white rounded-2xl p-4 shadow-sm">
             <h3 className="text-sm font-bold uppercase text-[#1a1a1a] mb-3 tracking-wide">Why Choose Us</h3>
-            <div className="grid grid-cols-2 gap-2">
+            <div className="grid grid-cols-3 gap-2">
               {whyChooseImages.map((src, i) => (
-                <div key={i} className="rounded-xl overflow-hidden" style={{ aspectRatio: "4/3" }}>
+                <div key={i} className="rounded-xl overflow-hidden aspect-square">
                   <img src={src} alt={`Why choose us ${i + 1}`} className="w-full h-full object-cover" />
                 </div>
               ))}
